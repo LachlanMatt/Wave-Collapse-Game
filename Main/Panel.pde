@@ -2,14 +2,19 @@ class Panel implements ButtonInterface {
 
     int PanelScale = 1;
     int unitsize = 80;
-    int PanelWidth, PanelHeight;
+    int PanelX, PanelY, PanelWidth, PanelHeight;
 
-    Panel (int w, int h) {
+    Panel (int x, int y, int w, int h) {
+      PanelX = x;
+      PanelY = y;
         PanelWidth = w;
         PanelHeight = h;
     }
 
 
+    void Draw () {
+      Draw(PanelX, PanelY, PanelWidth, PanelHeight);
+    }
 
     void Draw(int x, int y) {
         Draw(x, y, PanelWidth, PanelHeight);
@@ -32,9 +37,11 @@ class Panel implements ButtonInterface {
         }
     }
     
-  void ButtonClick(){};
-  void ButtonScroll(){};
-  void ButtonHover(){};
-  boolean ButtonContains(int x, int y){return false;};
+  void ButtonClick(int x, int y){};
+  void ButtonScroll(int x, int y){};
+  void ButtonHover(int x, int y){};
+  boolean ButtonContains(int x, int y) { 
+    return x>PanelX && x < PanelX+PanelWidth && y > PanelY && y < PanelY+PanelHeight;
+  };
   
 }
