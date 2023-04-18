@@ -1,8 +1,8 @@
-class TextButton implements ButtonInterface {
+class ButtonText implements ButtonInterface {
 
   String text;
   int buttonx, buttony, buttonw, buttonh, textsize;
-  TextButton (String t, int x, int y, int w, int h, int s) {
+  ButtonText (String t, int x, int y, int w, int h, int s) {
     text = t;
     buttonx = x;
     buttony = y;

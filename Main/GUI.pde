@@ -8,9 +8,9 @@ class GUI {
         buttons = new ArrayList<ButtonInterface>();
         panel = new Panel(100, 200, 1600, 800);
         buttons.add(panel);
-        buttons.add(new TextButton("Start",     100, 80, 200, 100, 80));
-        buttons.add(new TextButton("Next",      500, 80, 200, 100, 80));
-        buttons.add(new TextButton("Continue",  900, 80, 400, 100, 80));
+        buttons.add(new ButtonText("Start",     100, 80, 200, 100, 80));
+        buttons.add(new ButtonText("Next",      500, 80, 200, 100, 80));
+        buttons.add(new ButtonText("Continue",  900, 80, 400, 100, 80));
     }
 
 
