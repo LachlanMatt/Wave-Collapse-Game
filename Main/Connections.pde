@@ -1,6 +1,6 @@
 interface Connections {
 
-    Connections ConnectionUp = null, 
+    Connections[] ConnectionUp = null, 
                 ConnectionDown = null, 
                 ConnectionLeft = null, 
                 ConnectionRight = null, 
